@@ -1,0 +1,28 @@
+body {
+    margin: 0px;
+    padding: 3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.metric {
+    border: 1px solid #999;
+    display: inline-flex;
+    padding: 2rem;
+    font-family: sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px rgba(153, 174, 250, 0.3);
+}
+
+.metric h1 {
+    margin: 0px;
+    font-size: 5rem;
+}
+
+.metric h1::before {
+    content: attr(data-count);
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/price_calc.css">
+     <link rel="stylesheet" href="css/metric.css">
+     <link rel="stylesheet" href="css/app.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+           
+                {% if not login %}
+                <div class="nav-link-wrapper">
+                    <a href="/signup">sign up</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="/login">login</a>
+                </div>
+                {% endif %} {% if login %}
+                <div class="nav-link-wrapper">
+                    <a href="/dashboard">dashboard</a>
+                </div>
+
+                <br><br>
+
+
+                <div class="nav-link-wrapper">
+                    <a href="/logout">logout</a>
+                </div>
+                {% endif %}
+            
+        </div>
+    </div>
+
+
+
+
+
+    <div class="content-wrapper">
+        <div class="two-column-half-wrapper">
+            <div class="features-wrapper">
+
+                <div class="feature-img-wrapper">
+                    <img src="/images/logo.jpeg" alt="">
+                </div>
+                <hr>
+                <div class="feature-text-wrapper">
+                    <h2>Free Features</h2>
+                    <ul>
+                        <span title="Under progress! :)">Move your mouse over me!</span>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="not-included">..::::::..</li>
+                        <li class="not-included">..::::::..</li>
+                        <li class="not-included">..::::::..</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="features-wrapper">
+                <div class="feature-img-wrapper">
+                    <img src="/images/logo.jpeg" alt="">
+                </div>
+                <hr>
+                <div class="feature-text-wrapper">
+                    <h2>Premium Features</h2>
+                    <ul>
+                        <span title="Under progress! :)">Move your mouse over me!</span>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <li class="included">..::::::..</li>
+                        <span title="Under progress! :)">Move your mouse over me!</span>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+ <div class="navigation">
+      <a href="/"> Home Page </a>
+      <a href="/signup"> Registration </a>
+      <a href="/login">Login</a>
+      <a href="/pricing"> Pricing Page </a>
+      <a href="/features"> Features </a>
+      <a href="/about"> About us </a>
+ </div>
+
+
+
+<div class='imgcontainer'>
+    <p>We generate revenue using advertising, fee-for-service, and commission revenue model.</p>
+</div>
+
+  <footer>
+  
+      <p>Created by Ehsan Ziaei - April 2020</p>
+
+  </footer>
+
+
+</body>
+
+</html>

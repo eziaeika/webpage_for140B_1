@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<head>
+
+
+    <title>Fast Act - HomePage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+   
+
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/price_calc.css">
+
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/price_calc.css">
+    <link rel="stylesheet" href="css/metric.css">
+
+
+    <script src="javascript/price_calc.js"></script>
+    <script src="javascript/metric.js"></script>
+    <script src="javascript/appjava.js"></script>
+
+
+
+</head>
+
+
+<body>
+   
+
+<div class="header">
+      <div class="header_title"> Fast Act  </div>
+      <marquee class="scroll" behavior="scroll" direction="left">“Fast Act” is a profit organization that serves C2C customers who need Tutoring, caretaking, and Contract work! </marquee>
+</div>
+
+
+
+ <div class="navigation">
+      <a href="/"> Home Page </a>
+      <a href="/signup"> Registration </a>
+      <a href="/login">Login</a>
+      <a href="/pricing"> Pricing Page </a>
+      <a href="/features"> Features </a>
+      <a href="/about"> About us </a>
+ </div>
+
+
+ 
+
+
+                  
+                {% if not login %}
+                {% endif %} {% if login %}
+                <div class="nav-link-wrapper">
+                    <a href="/dashboard">dashboard</a>
+                </div>
+
+<br><br>
+
+                <div class="nav-link-wrapper">
+                    <a href="/logout">logout</a>
+                </div>
+                {% endif %}
+         
+    
+ 
+
+
+
+    <div class="slideshow-container">
+    
+        <div class="mySlides fade">
+    
+        
+        </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <div class="landing-two-column-wrapper">
+        <div class="landing-img-wrapper">
+            <div class="landing-img-background" style="background-image: url(/images/chatbot.jpg);"></div>
+        </div>
+       
+    </div>
+
+
+    <div class="register">
+    <p>
+    We aim to provide people a quick and easy way to seek help with tutoring, care-taking, plumbing and contract work. We connect customers to the best community  services! We provide small businesses a new opportunity to promote their services, from the highschool student who wants to do weekend dog walking, to the professional plumber who wants a larger customer field. We assist customers who are in need of a last minute service, such a babysitter for the family emergency, or a tutor for the upcoming final. Basically we got you  covered for a human-to-human service!
+    </p>
+    <div>Please click on the registration to register for our serivce</div>
+    </div>
+
+
+
+    <div class="landing-two-column-wrapper">
+        <div class="landing-user-count-wrapper" style="text-align: center; border: 1px solid black;">
+            <div class="user_count_wrapper">
+                <h2>To date we've had more than </h2>
+                <h2 id="user_count">0</h2>
+                <h2> customers register for our new product announcements</h2>
+            </div>
+           
+           
+        </div>
+    </div>
+
+
+
+<br><br><br>
+
+
+
+
+  <div class="price_calc">
+    <div class="price_title">This JavaScript shows how much profit Fast Act is making based on 5% profit</div>
+
+    <label for="number">Amount in $:</label>
+    <input name="number" id="amount" type="number" min="1" max="1000000" onchange="computeLoan()">
+    <p>Interest Rate 5% </p>
+
+    <h2 id="payment"></h2>
+  </div>
+
+
+
+<div class='imgcontainer'>
+    <p>We generate revenue using advertising, fee-for-service, and commission revenue model.</p>
+</div>
+
+
+
+
+<button onclick="document.getElementById('popup').style.display='block'">For A dynamic metric about product readiness Click Me!!!</button>
+<div id="popup">
+
+<ul id="skill">
+	<li><span class="bar graphic-design"></span><h3>Graphic Design</h3></li>
+	<li><span class="bar html-css"></span><h3>Html // Css</h3></li>
+	<li><span class="bar jquery"></span><h3>Price Page</h3></li>
+	<li><span class="bar wordpress"></span><h3>Home Page</h3></li>
+</ul>
+
+<button onclick="document.getElementById('popup').style.display='none'">Hide</button>
+
+</div>
+
+<br><br><br><br>
+
+
+<button onclick="document.getElementById('popup2').style.display='block'">For Dynamic News Feed Click Me!!!</button>
+<div id="popup2">
+
+<table>
+  <tr>
+    <th colspan="2">Product News</th>
+  </tr>
+  
+  
+  <tr>
+    <td>
+      <span>May 25, 2020</span><br>
+    </td>
+    <td>
+      <span>Optimize The Fron Page</span>
+    </td>
+  </tr>
+  
+   <tr>
+    <td>
+      <span>May 26, 2020</span><br>
+    </td>
+    <td>
+      <span>Work on the About Page</span>
+    </td>
+  </tr>
+  
+</table>
+
+<button onclick="document.getElementById('popup2').style.display='none'">Hide</button>
+
+</div>
+
+
+  <footer>
+  
+      <p>Created by Ehsan Ziaei - April 2020</p>
+
+  </footer>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+    showUserCount();
+    getNewsFeed();
+    getMetrics();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
+    }
+
+    function showUserCount() {
+        $(function() {
+            $.ajax({
+                method: "GET",
+                url: "/active_count",
+            }).done(function(data) {
+                var result = data;
+                console.log(result);
+                document.getElementById('user_count').innerHTML = result;
+            });
+
+        });
+        setTimeout(showUserCount, 60000);
+    }
+
+
+    function getNewsFeed() {
+        var i;
+        $.ajax({
+            type: "GET",
+            url: '/getNewsFeed',
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            cache: false,
+            success: function(data) {
+                var trHTML = '';
+                $.each(data.news, function(i, item) {
+                    trHTML += '<tr><td>' + data.news[i][1] + '</td><td>' + data.news[i][3] + '</td><td>' + data.news[i][2] + '</td></tr><hr>';
+                });
+                $('#news').replaceWith(trHTML);
+            }
+        });
+        setTimeout(getNewsFeed, 60000);
+    }
+
+
+    function getMetrics() {
+        var i;
+        $.ajax({
+            type: "GET",
+            url: '/getMetrics',
+            data: "{}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            cache: false,
+            success: function(data) {
+                var trHTML = '';
+                console.log(data);
+                console.log(data.metrics[0][1])
+                $.each(data.metrics, function(i, item) {
+                    trHTML += '<h2>' + data.metrics[0][1] + '</h2>';
+                });
+                $('#metrics').replaceWith(trHTML);
+            }
+        });
+        setTimeout(getMetrics, 60000);
+    }
+</script>
+
+</html>

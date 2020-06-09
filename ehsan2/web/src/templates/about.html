@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Fast Act - Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+
+   
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/price_calc.css">
+
+</head>
+
+
+<body>
+
+
+
+   <br><br>
+
+                
+                {% if not login %}
+                {% endif %} {% if login %}
+                <div class="nav-link-wrapper">
+                    <a href="/dashboard">dashboard</a>
+                </div>
+
+   <br><br>
+
+                <div class="nav-link-wrapper">
+                    <a href="/logout">logout</a>
+                </div>
+                {% endif %}
+           
+
+
+ <div class="container">
+      <h1 class="display-4 mb-4 mt-4"><center>About Us</center></h1>
+
+
+      <aside>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Ehsan Ziaeikajbaf</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for book in books %}
+          {% endfor %}
+        </tbody>
+      </table>
+      <div> <font size="4"></div>Ehsan is a 5th year undergraduate student in Eleanor Roosevelt
+       College at UC San Diego. He is studying Electrical engineering with a focus on machine 
+       learning. He is interested in pursuing further research work on artificial intelligence
+        and machine learning. He is very familiar with MATLAB, C programming, and Python through 
+        coursework at UCSD. He is also familiar with many concepts and theories of signal/image 
+        processing: Fourier analysis, convolution, LTI/LSI systems,
+         linear-phase filter design.</font> </div>
+        
+      </aside>
+
+    
+      <aside>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Andrew Britten</th>
+          </tr>
+        </thead>
+
+    </table>
+      <div> <font size="4"></div>Andrew Britten is a Navy veteran pursuing a B.S. in electrical 
+      engineering at UCSD. He is interested in studying and improving medical devices to enhance 
+      the healthcare treatment of the future. Andrew research is currently focused on 
+      focused ultrasound characterization and neuronal stimulation.</font> </div><br><br>
+
+      </aside>
+
+
+
+       <aside>
+
+         <table class="table">
+        <thead>
+          <tr>
+            <th>Serzh Yeranyan</th>
+
+
+          </tr>
+        </thead>
+
+    </table>
+      <div> <font size="4"></div>Serzh is a 5th year Electrical Engineering major at UCSD. Since younger age, he has always been curious about how the world came to be. He is very passionate about science and engineering. He wants to use his understanding of Physics and mathematics to help the society. His goal in this life is to improve the world and help make it better for future generations. He is also interested in History and studies the past so that he can make the future a better place.</font> </div><br><br>
+
+
+       </aside>
+
+
+
+      <aside>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Steve Sharp</th>
+
+
+          </tr>
+        </thead>
+
+    </table>
+      <div> <font size="4"></div>Steve is a 5th year Electrical Engineering major at UCSD. Unfortunately that's all I know.</font> </div><br><br>
+
+     </aside>
+
+
+     
+        <thead>
+            <div class="price_title"><center>Vision</center></div><br>
+        </thead>
+     
+
+
+      <div><center>Customers who need some assistance and don't have the skills or time. </center></font> </div>
+      <div><center>Who are in need of tutoring.</center></font> </div>
+
+
+
+
+  
+
+  <div class="navigation">
+      <a href="/"> Home Page </a>
+      <a href="/signup"> Registration </a>
+      <a href="/login">Login</a>
+      <a href="/pricing"> Pricing Page </a>
+      <a href="/features"> Features </a>
+      <a href="/about"> About us </a>
+ </div>
+
+
+
+<div class='imgcontainer'>
+    <p>We generate revenue using advertising, fee-for-service, and commission revenue model.</p>
+</div>
+
+  <footer>
+  
+      <p>Created by Ehsan Ziaei - April 2020</p>
+
+  </footer>
+
+
+
+</body>
+<script>
+    const profiles = document.querySelectorAll('.profile-wrapper')
+
+    profiles.forEach(profile => {
+        profile.addEventListener('mouseover', () => {
+            /* use this to get the array of child elements */
+            console.log(profile.childNodes)
+                /* check the child nodes associated classes */
+                /* console.log(portfolioItem.childNodes[1].classList) */
+            profile.childNodes[1].classList.add('img-darken');
+        })
+
+        profile.addEventListener('mouseout', () => {
+            profile.childNodes[1].classList.remove('img-darken');
+        })
+    })
+</script>
+
+</html>
